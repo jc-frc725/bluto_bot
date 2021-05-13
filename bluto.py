@@ -26,7 +26,7 @@ class General(commands.Cog):
 
   @commands.command(help = '- Get a random emoji!')
   async def emojipls(self, ctx):
-    await ctx.send(random.choice(response.emojis))
+    await ctx.send(random.choice(responses.emojis))
   
   @commands.command(help = '- Suggestions for what to eat.')
   async def eatwhat(self, ctx):
@@ -50,7 +50,7 @@ class General(commands.Cog):
     price = soup.find(class_ = "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)").text
     await ctx.send(f'{arg.upper()} is currently at ${price}.')
 
-class Reminder(commands.cog):
+class Reminder(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
 
@@ -59,4 +59,5 @@ class Reminder(commands.cog):
     await ctx.send('Hello Reminder. Curently WIP!')
 
 bot.add_cog(General(bot))
+bot.add_cog(Reminder(bot))
 bot.run(TOKEN)
