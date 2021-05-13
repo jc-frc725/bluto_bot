@@ -10,6 +10,7 @@ In Discord:
 
 Example:
 
+![bluto_example](images/blutobot_example.png)
 
 ## Installation
 1. Navigate to root directory
